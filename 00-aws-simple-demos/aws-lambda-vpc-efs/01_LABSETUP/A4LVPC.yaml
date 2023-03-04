@@ -17,13 +17,13 @@ Resources:
       EnableDnsHostnames: true
       Tags:
         - Key: Name
-          Value: A4LVPC
+          Value: SampleVPC
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
     Properties:
       Tags:
       - Key: Name
-        Value: A4L-IGW
+        Value: Sample-IGW
   EIPA:
     Type: 'AWS::EC2::EIP'
     Properties:
@@ -53,21 +53,21 @@ Resources:
       VpcId: !Ref VPC
       Tags:
       - Key: Name
-        Value: A4L-vpc-rt-pub
+        Value: SampleL-vpc-rt-pub
   RTPrivateA: 
     Type: 'AWS::EC2::RouteTable'
     Properties:
       VpcId: !Ref VPC
       Tags:
       - Key: Name
-        Value: A4L-vpc-rt-privA
+        Value: Sample-vpc-rt-privA
   RTPrivateB: 
     Type: 'AWS::EC2::RouteTable'
     Properties:
       VpcId: !Ref VPC
       Tags:
       - Key: Name
-        Value: A4L-vpc-rt-privB
+        Value: Sample-vpc-rt-privB
   RTPubDefaultIPv4: 
     Type: 'AWS::EC2::Route'
     DependsOn: InternetGatewayAttachment
